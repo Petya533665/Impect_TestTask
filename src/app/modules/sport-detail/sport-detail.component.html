@@ -2,7 +2,7 @@
   <header>
     {{ title }} League
   </header>
-  <mat-accordion class="example-headers-align" multi>
+  <mat-accordion multi>
     <ng-container *ngFor="let country of countrys$ | async">
       <mat-expansion-panel>
         <mat-expansion-panel-header>
@@ -11,9 +11,9 @@
           </mat-panel-title>
         </mat-expansion-panel-header>
         <ng-container *ngFor="let league of country.leagues">
-          <div>
+          <a [routerLink]="['/league']" [queryParams]="{ leagueId: league.idLeague }">
             {{ league.strLeague }}
-          </div>
+          </a>
         </ng-container>
       </mat-expansion-panel>
 

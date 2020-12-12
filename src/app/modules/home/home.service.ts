@@ -1,15 +1,15 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
 export class HomeService {
 
-  constructor(private readonly http: HttpClient) { }
+  constructor(@Inject('BASE_API_URL') private baseUrl: string, private readonly http: HttpClient) { }
 
   public getAllSports(): Observable<any[]> {
-    return this.http.get('https://www.thesportsdb.com/api/v1/json/1/all_sports.php')
+    return this.http.get(`${this.baseUrl}/all_sports.php`)
       .pipe(
         map((resp: any) => resp.sports),
       );

@@ -14,10 +14,7 @@ export class HomeComponent implements OnInit {
     this.sports$ = new Subject<any[]>().asObservable();
   }
 
-
   public ngOnInit(): void {
     this.sports$ = this.homeService.getAllSports();
-    this.sports$.subscribe(arr => console.log(arr));
   }
-
 }

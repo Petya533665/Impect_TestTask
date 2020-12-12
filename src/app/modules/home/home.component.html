@@ -1,6 +1,6 @@
 <div class="home-page container">
   <ng-container *ngFor="let sport of sports$ | async">
-    <mat-card class="home-page__card" [routerLink]="['../detail']" [queryParams]="{ sport: sport.strSport }">
+    <mat-card class="home-page__card" [routerLink]="['../sport']" [queryParams]="{ sport: sport.strSport }">
       <div class="home-page__card-thumb">
         <img mat-card-image
              [src]="sport.strSportThumb"

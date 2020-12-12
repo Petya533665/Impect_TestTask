@@ -1,0 +1,33 @@
+<div class="league-page container">
+  <mat-tab-group>
+    <mat-tab label="Last events">
+      <mat-accordion multi>
+        <ng-container *ngFor="let event of lastEvents$ | async">
+          <mat-expansion-panel>
+            <mat-expansion-panel-header>
+              <mat-panel-title>
+                {{ event.strEvent }}
+              </mat-panel-title>
+            </mat-expansion-panel-header>
+            <span [routerLink]="['/club']" [queryParams]="{ clubId: event.idHomeTeam }">{{ event.strHomeTeam }}</span> - <span [routerLink]="['/club']" [queryParams]="{ clubId: event.idAwayTeam }">{{ event.strAwayTeam }}</span>
+          </mat-expansion-panel>
+
+        </ng-container>
+      </mat-accordion>
+    </mat-tab>
+    <mat-tab label="Description">
+      <!-- Todo: need API for get description league by Id -->
+      Description
+    </mat-tab>
+    <mat-tab label="Seasons">
+      <h2>Seasons</h2>
+      <ng-container *ngFor="let season of seasons$ | async">
+        <div>
+          {{ season.strSeason }}
+        </div>
+      </ng-container>
+    </mat-tab>
+  </mat-tab-group>
+</div>
+
+

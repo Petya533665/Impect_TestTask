@@ -24,6 +24,6 @@ export class SportDetailComponent implements OnInit {
   public ngOnInit(): void {
     const sport: string = this.route.snapshot.queryParamMap.get(this.QUERY_PARAM_SPORT) as string;
     this.title = sport;
-    this.countrys$ = this.sportDetailService.detailSport(sport);
+    this.countrys$ = this.sportDetailService.getDetailSport(sport);
   }
 }

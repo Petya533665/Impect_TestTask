@@ -7,12 +7,16 @@ const routes: Routes = [
     loadChildren: () => import(/* webpackChunkName: 'home' */ './modules/home/home.module').then(m => m.HomeModule),
   },
   {
-    path: 'sport-detail',
+    path: 'sport',
     loadChildren: () => import(/* webpackChunkName: 'sport-detail' */ './modules/sport-detail/sport-detail.module').then(m => m.SportDetailModule),
   },
   {
-    path: 'league-detail',
-    loadChildren: () => import(/* webpackChunkName: 'league-detail' */ './modules/league-detail/league-detail.module').then(m => m.LeagueDetailModule),
+    path: 'league',
+    loadChildren: () => import(/* webpackChunkName: 'league-detail' */ './modules/league/league.module').then(m => m.LeagueModule),
+  },
+  {
+    path: 'club',
+    loadChildren: () => import(/* webpackChunkName: 'club-detail' */ './modules/club/club.module').then(m => m.ClubModule),
   },
   {
     path: '**',
