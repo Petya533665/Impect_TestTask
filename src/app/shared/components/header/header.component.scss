@@ -1,0 +1,24 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.menu {
+  display: flex;
+
+  .nav-item {
+    padding: 0 10px;
+    .nav-link {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: #fff;
+      .nav-icon {
+        margin: 0 3px;
+      }
+    }
+  }
+}
+
+.nav-active {
+  color: red;
+}

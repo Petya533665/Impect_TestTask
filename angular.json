@@ -31,6 +31,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -94,6 +95,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/pink-bluegrey.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -127,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "test-app"
+  "defaultProject": "test-app",
+  "cli": {
+    "analytics": "75b1fb38-7339-4317-9a40-8229f86525cc"
+  }
 }

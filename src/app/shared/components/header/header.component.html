@@ -1,0 +1,36 @@
+  <mat-toolbar>
+    <nav class="navigation">
+      <ul class="menu">
+        <li class="nav-item"><a routerLink="/" [routerLinkActive]="['nav-active']" class="nav-link">
+          <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
+          Sport Portal</a></li>
+        <li class="nav-item"><a routerLink="search"
+                                [routerLinkActive]="['nav-active']"
+                                class="nav-link">
+          <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example home icon">search</mat-icon>
+          search</a></li>
+        <li class="nav-item"><a routerLink="events"
+                                [routerLinkActive]="['nav-active']"
+                                class="nav-link">
+          <mat-icon class="nav-icon" aria-hidden="false" aria-label="Example home icon">calendar_today</mat-icon>
+          Event</a></li>
+        <li class="nav-item"><a routerLink="sport"
+                                [routerLinkActive]="['nav-active']"
+                                class="nav-link">Sport</a></li>
+        <li class="nav-item"><a routerLink="country"
+                                [routerLinkActive]="['nav-active']"
+                                class="nav-link">Country</a></li>
+      </ul>
+    </nav>
+
+    <span class="example-spacer"></span>
+    <button mat-icon-button
+            class="example-icon favorite-icon"
+            aria-label="Example icon-button with heart icon">
+      <mat-icon class="nav-icon">favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon class="nav-icon">share</mat-icon>
+    </button>
+  </mat-toolbar>
+

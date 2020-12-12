@@ -1,1 +1,21 @@
 /* You can add global styles to this file, and also import other style files */
+@import "./assets/stylesheets/reset.css";
+
+* {
+  box-sizing: border-box
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
