@@ -1,2 +1,19 @@
-<p>home works!</p>
-
+<div class="home-page container">
+  <ng-container *ngFor="let sport of sports$ | async">
+    <mat-card class="home-page__card">
+      <mat-card-header>
+        <mat-card-title>{{ sport.strSport }}</mat-card-title>
+      </mat-card-header>
+      <div class="home-page__card-thumb">
+        <img mat-card-image
+             [src]="sport.strSportThumb"
+             [attr.alt]="sport.strSport">
+      </div>
+      <mat-card-content>
+        <p>
+          {{ sport.strSportDescription }}
+        </p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+</div>

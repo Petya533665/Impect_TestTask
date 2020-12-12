@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable()
-export class HomeService {
+export class SportDetailService {
 
   constructor(private readonly http: HttpClient) { }
 
